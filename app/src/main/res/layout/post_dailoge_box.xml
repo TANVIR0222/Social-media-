@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+
+<com.google.android.material.appbar.MaterialToolbar
+android:id="@+id/materialToolbar"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:background="@color/white"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintHorizontal_bias="1.0"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent"
+app:title="New Post" />
+
+<com.google.android.material.card.MaterialCardView
+android:id="@+id/materialCardView"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginTop="20dp"
+android:background="@color/white"
+android:elevation="20dp"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/materialToolbar">
+
+<ImageView
+    android:id="@+id/upload_image"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:src="@drawable/image">
+
+</ImageView>
+
+</com.google.android.material.card.MaterialCardView>
+
+<com.google.android.material.textfield.TextInputLayout
+android:id="@+id/caption"
+style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginStart="30dp"
+android:layout_marginTop="50dp"
+android:layout_marginEnd="30dp"
+android:hint="write a caption"
+app:boxStrokeColor="#C940E1"
+
+app:layout_constraintEnd_toEndOf="@+id/materialCardView"
+app:layout_constraintStart_toStartOf="@+id/materialCardView"
+app:layout_constraintTop_toBottomOf="@+id/materialCardView">
+
+
+<com.google.android.material.textfield.TextInputEditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    />
+
+</com.google.android.material.textfield.TextInputLayout>
+
+<LinearLayout
+android:id="@+id/post"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_margin="10dp"
+android:orientation="horizontal"
+android:padding="10dp"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/caption">
+
+<ImageView
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    android:padding="5dp"
+    android:src="@drawable/image" />
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="15dp"
+    android:gravity="center_vertical"
+    android:text=" share to Post"
+    android:textSize="16dp"
+    android:textStyle="bold" />
+
+
+</LinearLayout>
+
+<TextView
+android:id="@+id/textView2"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginStart="20dp"
+android:layout_marginTop="16dp"
+android:paddingRight="40dp"
+android:text="your post may be appear in post and can be seen on the posts tab under profile "
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/post" />
+
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+android:padding="10dp"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toEndOf="@+id/textView2"
+app:layout_constraintStart_toStartOf="@+id/textView2"
+app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+<!--<Button-->
+<!--    android:id="@+id/cancel"-->
+<!--    style="@style/Widget.Material3.Button.OutlinedButton"-->
+<!--    android:layout_width="150dp"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_marginStart="20dp"-->
+<!--    android:layout_marginTop="10dp"-->
+<!--    android:backgroundTint="#FFFFFF"-->
+<!--    android:text="Cancel"-->
+<!--    android:textColor="#B8A8A8"-->
+<!--    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--    app:layout_constraintEnd_toEndOf="parent"-->
+<!--    app:layout_constraintHorizontal_bias="0.0"-->
+<!--    app:layout_constraintStart_toStartOf="parent"-->
+<!--    app:strokeColor="#C940E1" />-->
+
+<Button
+    android:id="@+id/addPost"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginBottom="228dp"
+    android:backgroundTint="#093197"
+    android:elevation="10dp"
+    android:text="Post"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent" />
+
+</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
